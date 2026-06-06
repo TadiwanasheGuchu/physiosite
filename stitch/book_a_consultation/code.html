@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sossus Physiotherapy | Personalized Consultation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "primary-fixed": "#ffdbcd",
+                "inverse-primary": "#ffb595",
+                "on-secondary-fixed": "#221a0f",
+                "outline": "#8c7166",
+                "on-error": "#ffffff",
+                "secondary-container": "#efe0cd",
+                "surface": "#f7f9ff",
+                "inverse-surface": "#203243",
+                "on-error-container": "#93000a",
+                "surface-container-low": "#edf4ff",
+                "error-container": "#ffdad6",
+                "on-surface": "#091d2e",
+                "on-tertiary-fixed": "#1b1c1c",
+                "on-background": "#091d2e",
+                "surface-variant": "#d1e4fb",
+                "surface-container-high": "#d9eaff",
+                "on-tertiary-container": "#fefcfb",
+                "surface-bright": "#f7f9ff",
+                "on-tertiary": "#ffffff",
+                "on-secondary-container": "#6d6354",
+                "on-tertiary-fixed-variant": "#474747",
+                "tertiary-container": "#757474",
+                "surface-container": "#e3efff",
+                "surface-tint": "#a23f00",
+                "on-primary-container": "#fffbff",
+                "surface-container-lowest": "#ffffff",
+                "on-secondary": "#ffffff",
+                "outline-variant": "#e0c0b2",
+                "on-primary-fixed-variant": "#7c2e00",
+                "secondary": "#675d4e",
+                "primary": "#9e3d00",
+                "on-surface-variant": "#594238",
+                "secondary-fixed": "#efe0cd",
+                "secondary-fixed-dim": "#d2c4b2",
+                "background": "#f7f9ff",
+                "surface-container-highest": "#d1e4fb",
+                "inverse-on-surface": "#e8f2ff",
+                "on-secondary-fixed-variant": "#4f4538",
+                "tertiary-fixed": "#e4e2e2",
+                "tertiary-fixed-dim": "#c8c6c6",
+                "error": "#ba1a1a",
+                "on-primary": "#ffffff",
+                "surface-dim": "#c9dcf3",
+                "primary-fixed-dim": "#ffb595",
+                "primary-container": "#c64f00",
+                "on-primary-fixed": "#351000",
+                "tertiary": "#5c5c5c"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "container-max": "1280px",
+                "lg": "48px",
+                "xs": "4px",
+                "sm": "12px",
+                "md": "24px",
+                "xl": "80px",
+                "base": "8px",
+                "gutter": "24px"
+            },
+            "fontFamily": {
+                "headline-lg": ["EB Garamond"],
+                "label-md": ["Inter"],
+                "headline-md": ["EB Garamond"],
+                "display-lg": ["EB Garamond"],
+                "body-lg": ["Inter"],
+                "headline-lg-mobile": ["EB Garamond"],
+                "body-md": ["Inter"]
+            },
+            "fontSize": {
+                "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .grain-overlay {
+            background-image: url("https://www.transparenttextures.com/patterns/p6.png");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        .bento-card {
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            border: 1px solid rgba(140, 113, 102, 0.1);
+        }
+        .bento-card:hover {
+            border-color: rgba(158, 61, 0, 0.3);
+        }
+        .step-transition {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .progress-line {
+            transition: width 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen overflow-x-hidden">
+<div class="fixed inset-0 grain-overlay z-0"></div>
+<!-- Navigation suppressed for focused transactional flow as per "Shell Visibility & Relevance" mandate -->
+<!-- Top Bar for Context -->
+<nav class="fixed top-0 w-full z-50 glass-nav bg-surface/80 border-b border-on-surface/5">
+<div class="flex justify-between items-center px-gutter py-md max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-primary tracking-tight">Sossus Physiotherapy</div>
+<button class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" onclick="window.location.reload()">
+<span class="material-symbols-outlined">close</span>
+                EXIT SESSION
+            </button>
+</div>
+</nav>
+<main class="relative z-10 pt-xl pb-xl px-gutter max-w-4xl mx-auto min-h-screen flex flex-col">
+<!-- Progress Indicator -->
+<div class="mt-lg mb-xl">
+<div class="flex justify-between items-end mb-sm">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest" id="step-label">Step 1 of 4</span>
+<span class="font-headline-md text-headline-md text-on-surface" id="step-title">Service Selection</span>
+</div>
+<div class="h-1 w-full bg-secondary-container rounded-full overflow-hidden">
+<div class="progress-line h-full bg-primary" id="progress-bar" style="width: 25%;"></div>
+</div>
+</div>
+<!-- Form Container -->
+<div class="flex-grow" id="booking-flow">
+<!-- Step 1: Service Selection -->
+<section class="step-transition opacity-100 translate-y-0 block" id="step-1">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- Service Card 1 -->
+<div class="bento-card p-md rounded-xl bg-surface-container-low cursor-pointer flex flex-col justify-between h-64 group" onclick="nextStep(2)">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-4xl">physical_therapy</span>
+<span class="text-xs font-label-md px-sm py-xs bg-primary-fixed text-on-primary-fixed rounded-full">MOST POPULAR</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md mb-xs">Initial Assessment</h3>
+<p class="text-on-surface-variant text-sm">60-minute deep dive into your biomechanics, pain history, and goals.</p>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="bento-card p-md rounded-xl bg-surface-container-low cursor-pointer flex flex-col justify-between h-64 group" onclick="nextStep(2)">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-4xl">rebase_edit</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md mb-xs">Follow-up Session</h3>
+<p class="text-on-surface-variant text-sm">Targeted 45-minute treatment and progress review for existing patients.</p>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="bento-card p-md rounded-xl bg-surface-container-low cursor-pointer flex flex-col justify-between h-64 group" onclick="nextStep(2)">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-4xl">sports_gymnastics</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md mb-xs">Sports Performance</h3>
+<p class="text-on-surface-variant text-sm">Advanced kinetic analysis for elite athletes and movement enthusiasts.</p>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="bento-card p-md rounded-xl bg-surface-container-low cursor-pointer flex flex-col justify-between h-64 group" onclick="nextStep(2)">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-4xl">home_health</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md mb-xs">Virtual Consult</h3>
+<p class="text-on-surface-variant text-sm">Expert guidance from the comfort of your home via secure video link.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Step 2: Clinician Preference -->
+<section class="step-transition opacity-0 translate-y-10 hidden" id="step-2">
+<div class="grid grid-cols-1 gap-md">
+<div class="flex items-center gap-md p-md rounded-xl bg-surface-container-low bento-card cursor-pointer group" onclick="nextStep(3)">
+<img alt="Portrait of Dr. Elena Marais" class="w-24 h-24 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="A professional, warm portrait of a female physiotherapist in a modern, sunlit clinic. She is wearing a soft linen medical tunic, leaning against a clean Kalahari sand-colored wall. The lighting is soft and golden, characteristic of a high-end wellness retreat. The overall mood is authoritative yet deeply empathetic and calm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCstcqRDn5R6-SrOWNhpKT18Dz8mx4yX09UfzVj9i0_eRvS2Qp-lYBHQg4e2ENNEfEqomgpR4EIxbzWM9zgLpzw8N_j5yTevMTp9ACLNahJo4M4DiIO_yPB_HllzxJbRUj8YJVReiwQ3X8jE_yw7hDgV20ZpmgRQPFgw_Bgpyqu8Cm-lwIv4i29PuWgi7Qe7Hd_fB7PsO1AuCxEbxZ8tHkciQqjodVpxEfDAcXmkqt6izcNepndkwUrdOv36dPNKI3gtHKDQW5Eea4_"/>
+<div class="flex-grow">
+<h3 class="font-headline-md text-headline-md">Dr. Elena Marais</h3>
+<p class="text-on-surface-variant font-label-md">Senior Specialist | Spinal Mechanics</p>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+<div class="flex items-center gap-md p-md rounded-xl bg-surface-container-low bento-card cursor-pointer group" onclick="nextStep(3)">
+<img alt="Portrait of Johan van Wyk" class="w-24 h-24 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="A professional portrait of a male physiotherapist in his late 30s. He has a friendly expression and is standing in a minimalist desert-modern office featuring sandstone textures and a large window showing a horizon. He is dressed in a charcoal gray professional polo. The image is sophisticated and bright with natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZbQlFGDOeDOezAHvLC0ivZC7fPZ6FheDth9AxaQ2CwLLWIUu7LJDAiIrKqDShG0BI2DQqSA6ysbVjtlmpLCxrcOlo1t-drytGTuSoXHJ4Dnk_DugP_skDzC1FPav8cT09LPXzz7_KK8a6CydJTGZ3dkI4qSGJriTh9DcXTGBVYmacbfCCSuN4KLp9xdLXFRBc-tWTB5ISCR7G0UdVadsAkj9Tt894tACfe1VUeCBgekkXESlUgDg_7wVnNhuJwxVsB4R8eWAru2cz"/>
+<div class="flex-grow">
+<h3 class="font-headline-md text-headline-md">Johan van Wyk</h3>
+<p class="text-on-surface-variant font-label-md">Lead Clinician | Sports Injury Recovery</p>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+<div class="flex items-center gap-md p-md rounded-xl bg-surface-container-low bento-card cursor-pointer group" onclick="nextStep(3)">
+<div class="w-24 h-24 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-4xl">shuffle</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline-md text-headline-md">No Preference</h3>
+<p class="text-on-surface-variant font-label-md">Match me with the first available expert.</p>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+</div>
+<button class="mt-lg flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" onclick="nextStep(1)">
+<span class="material-symbols-outlined">arrow_back</span> BACK TO SERVICES
+                </button>
+</section>
+<!-- Step 3: Date & Time -->
+<section class="step-transition opacity-0 translate-y-10 hidden" id="step-3">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+<!-- Calendar Placeholder -->
+<div class="bg-surface-container-low p-md rounded-xl bento-card">
+<div class="flex justify-between items-center mb-md">
+<span class="font-bold text-lg">October 2024</span>
+<div class="flex gap-sm">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">chevron_left</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">chevron_right</span>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-xs text-center font-label-md text-xs mb-sm">
+<div class="opacity-40">M</div><div class="opacity-40">T</div><div class="opacity-40">W</div><div class="opacity-40">T</div><div class="opacity-40">F</div><div class="opacity-40">S</div><div class="opacity-40">S</div>
+</div>
+<div class="grid grid-cols-7 gap-xs text-center">
+<!-- Selected day -->
+<div class="p-sm text-sm opacity-20">28</div><div class="p-sm text-sm opacity-20">29</div><div class="p-sm text-sm opacity-20">30</div>
+<div class="p-sm text-sm hover:bg-primary-fixed hover:text-on-primary-fixed cursor-pointer rounded-lg transition-colors">1</div>
+<div class="p-sm text-sm bg-primary text-on-primary rounded-lg font-bold">2</div>
+<div class="p-sm text-sm hover:bg-primary-fixed hover:text-on-primary-fixed cursor-pointer rounded-lg transition-colors">3</div>
+<div class="p-sm text-sm hover:bg-primary-fixed hover:text-on-primary-fixed cursor-pointer rounded-lg transition-colors">4</div>
+<div class="p-sm text-sm hover:bg-primary-fixed hover:text-on-primary-fixed cursor-pointer rounded-lg transition-colors">5</div>
+<div class="p-sm text-sm hover:bg-primary-fixed hover:text-on-primary-fixed cursor-pointer rounded-lg transition-colors">6</div>
+<div class="p-sm text-sm hover:bg-primary-fixed hover:text-on-primary-fixed cursor-pointer rounded-lg transition-colors">7</div>
+<div class="p-sm text-sm hover:bg-primary-fixed hover:text-on-primary-fixed cursor-pointer rounded-lg transition-colors">8</div>
+</div>
+</div>
+<!-- Slots -->
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-md tracking-widest uppercase">Available Slots</h4>
+<div class="space-y-sm">
+<div class="p-md rounded-xl bg-surface-container-low hover:bg-primary-fixed/20 border border-transparent hover:border-primary/20 cursor-pointer flex justify-between items-center transition-all" onclick="nextStep(4)">
+<span class="font-headline-md text-headline-md text-on-surface">09:00 AM</span>
+<span class="text-xs font-label-md opacity-60">MORNING</span>
+</div>
+<div class="p-md rounded-xl bg-surface-container-low hover:bg-primary-fixed/20 border border-transparent hover:border-primary/20 cursor-pointer flex justify-between items-center transition-all" onclick="nextStep(4)">
+<span class="font-headline-md text-headline-md text-on-surface">11:30 AM</span>
+<span class="text-xs font-label-md opacity-60">MORNING</span>
+</div>
+<div class="p-md rounded-xl bg-surface-container-low hover:bg-primary-fixed/20 border border-transparent hover:border-primary/20 cursor-pointer flex justify-between items-center transition-all" onclick="nextStep(4)">
+<span class="font-headline-md text-headline-md text-on-surface">02:15 PM</span>
+<span class="text-xs font-label-md opacity-60">AFTERNOON</span>
+</div>
+<div class="p-md rounded-xl bg-surface-container-low hover:bg-primary-fixed/20 border border-transparent hover:border-primary/20 cursor-pointer flex justify-between items-center transition-all" onclick="nextStep(4)">
+<span class="font-headline-md text-headline-md text-on-surface">04:45 PM</span>
+<span class="text-xs font-label-md opacity-60">LATE DAY</span>
+</div>
+</div>
+</div>
+</div>
+<button class="mt-lg flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" onclick="nextStep(2)">
+<span class="material-symbols-outlined">arrow_back</span> BACK TO CLINICIANS
+                </button>
+</section>
+<!-- Step 4: Patient Details -->
+<section class="step-transition opacity-0 translate-y-10 hidden" id="step-4">
+<div class="grid grid-cols-1 gap-lg max-w-2xl mx-auto">
+<div class="space-y-md">
+<div class="relative">
+<label class="font-label-md text-xs text-primary block mb-xs">FULL LEGAL NAME</label>
+<input class="w-full bg-transparent border-0 border-b border-outline/30 focus:ring-0 focus:border-primary text-headline-md font-headline-md py-sm transition-all placeholder:opacity-30" placeholder="Enter your name" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-md text-xs text-primary block mb-xs">EMAIL ADDRESS</label>
+<input class="w-full bg-transparent border-0 border-b border-outline/30 focus:ring-0 focus:border-primary text-headline-md font-headline-md py-sm transition-all placeholder:opacity-30" placeholder="email@example.com" type="email"/>
+</div>
+<div class="relative">
+<label class="font-label-md text-xs text-primary block mb-xs">PRIMARY AREA OF CONCERN</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline/30 focus:ring-0 focus:border-primary text-body-lg font-body-lg py-sm transition-all placeholder:opacity-30 resize-none" placeholder="Describe where you feel pain..." rows="2"></textarea>
+</div>
+</div>
+<div class="bg-secondary-container/50 p-md rounded-xl border border-outline-variant/10">
+<div class="flex items-start gap-sm">
+<input class="mt-1 rounded text-primary focus:ring-primary" id="terms" type="checkbox"/>
+<label class="text-sm text-on-secondary-container" for="terms">I consent to the collection of my medical data for clinical purposes and agree to the 24-hour cancellation policy.</label>
+</div>
+</div>
+<button class="w-full py-md bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:bg-primary-container transition-all flex items-center justify-center gap-sm group" onclick="finishFlow()">
+                        CONFIRM CONSULTATION
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">check_circle</span>
+</button>
+</div>
+<button class="mt-lg flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" onclick="nextStep(3)">
+<span class="material-symbols-outlined">arrow_back</span> BACK TO CALENDAR
+                </button>
+</section>
+<!-- Success Screen -->
+<section class="step-transition opacity-0 translate-y-10 hidden text-center py-xl" id="step-success">
+<div class="mb-lg">
+<div class="w-20 h-20 bg-primary-fixed text-primary rounded-full flex items-center justify-center mx-auto mb-md scale-110 animate-pulse">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1">verified</span>
+</div>
+<h2 class="font-display-lg text-display-lg mb-sm">Confirmed.</h2>
+<p class="text-body-lg text-on-surface-variant max-w-md mx-auto">Your journey to healing begins on Wednesday, Oct 2nd at 09:00 AM. A calendar invitation has been sent to your email.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-md justify-center items-center">
+<button class="px-lg py-md border border-primary text-primary rounded-lg font-label-md text-label-md hover:bg-primary hover:text-white transition-all">ADD TO CALENDAR</button>
+<button class="px-lg py-md text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all">VIEW PATIENT PORTAL</button>
+</div>
+</section>
+</div>
+</main>
+<footer class="w-full rounded-t-xl bg-secondary-container mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter py-xl gap-md max-w-container-max mx-auto text-on-secondary-container">
+<div class="font-headline-md text-headline-md text-primary tracking-tight">Sossus Physiotherapy</div>
+<div class="flex gap-lg font-body-md text-body-md">
+<a class="opacity-80 hover:opacity-100 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="opacity-80 hover:opacity-100 hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<p class="text-xs font-label-md opacity-60">© 2024 Sossus Physiotherapy Namibia. Desert-Modern Healing.</p>
+</div>
+</footer>
+<script>
+        const titles = {
+            1: "Service Selection",
+            2: "Clinician Preference",
+            3: "Date & Time",
+            4: "Patient Details"
+        };
+
+        function nextStep(stepNumber) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(s => {
+                s.classList.add('opacity-0', 'translate-y-10', 'hidden');
+                s.classList.remove('opacity-100', 'translate-y-0', 'block');
+            });
+
+            // Show selected section
+            const currentSection = document.getElementById(`step-${stepNumber}`);
+            if (currentSection) {
+                currentSection.classList.remove('hidden');
+                setTimeout(() => {
+                    currentSection.classList.add('block', 'opacity-100', 'translate-y-0');
+                    currentSection.classList.remove('opacity-0', 'translate-y-10');
+                }, 10);
+            }
+
+            // Update Progress Bar
+            if (stepNumber <= 4) {
+                const progress = (stepNumber / 4) * 100;
+                document.getElementById('progress-bar').style.width = `${progress}%`;
+                document.getElementById('step-label').textContent = `Step ${stepNumber} of 4`;
+                document.getElementById('step-title').textContent = titles[stepNumber];
+            } else {
+                // Success State - hide progress
+                document.querySelector('.h-1.w-full').classList.add('hidden');
+                document.getElementById('step-label').classList.add('hidden');
+                document.getElementById('step-title').classList.add('hidden');
+            }
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function finishFlow() {
+            nextStep('success');
+        }
+
+        // Animation for atmospheric warmth
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            document.body.style.background = `radial-gradient(circle at ${x * 100}% ${y * 100}%, rgba(158, 61, 0, 0.03) 0%, #f7f9ff 50%)`;
+        });
+    </script>
+</body></html>

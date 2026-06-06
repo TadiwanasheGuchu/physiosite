@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Booking Confirmed | Sossus Physiotherapy</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#c9dcf3",
+                    "on-surface": "#091d2e",
+                    "on-primary-fixed": "#351000",
+                    "surface-variant": "#d1e4fb",
+                    "primary-container": "#c64f00",
+                    "surface-tint": "#a23f00",
+                    "background": "#f7f9ff",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#e8f2ff",
+                    "inverse-surface": "#203243",
+                    "primary-fixed": "#ffdbcd",
+                    "secondary-container": "#efe0cd",
+                    "on-secondary-fixed-variant": "#4f4538",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f7f9ff",
+                    "primary": "#9e3d00",
+                    "outline": "#8c7166",
+                    "on-error": "#ffffff",
+                    "on-background": "#091d2e",
+                    "surface": "#f7f9ff",
+                    "secondary-fixed-dim": "#d2c4b2",
+                    "on-secondary-fixed": "#221a0f",
+                    "primary-fixed-dim": "#ffb595",
+                    "surface-container-low": "#edf4ff",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#e4e2e2",
+                    "on-tertiary-container": "#fefcfb",
+                    "tertiary": "#5c5c5c",
+                    "on-primary-container": "#fffbff",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#757474",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "secondary-fixed": "#efe0cd",
+                    "inverse-primary": "#ffb595",
+                    "on-primary-fixed-variant": "#7c2e00",
+                    "surface-container-highest": "#d1e4fb",
+                    "secondary": "#675d4e",
+                    "tertiary-fixed-dim": "#c8c6c6",
+                    "outline-variant": "#e0c0b2",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "surface-container": "#e3efff",
+                    "on-surface-variant": "#594238",
+                    "on-secondary-container": "#6d6354",
+                    "surface-container-high": "#d9eaff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "lg": "48px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "xl": "80px",
+                    "base": "8px",
+                    "xs": "4px",
+                    "md": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": ["EB Garamond"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["EB Garamond"],
+                    "headline-lg": ["EB Garamond"],
+                    "display-lg": ["EB Garamond"],
+                    "label-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(247, 249, 255, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .grainy-overlay {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 10;
+            opacity: 0.03;
+            background-image: url("https://www.transparenttextures.com/patterns/p6.png");
+        }
+        .reveal-up {
+            animation: revealUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes revealUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .stagger-1 { animation-delay: 0.2s; }
+        .stagger-2 { animation-delay: 0.4s; }
+        .stagger-3 { animation-delay: 0.6s; }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+<div class="grainy-overlay"></div>
+<!-- Top Navigation Bar (Shared Component Anchor) -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-on-surface/10 shadow-sm transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-gutter py-md max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-primary tracking-tight">Sossus Physiotherapy</div>
+<div class="hidden md:flex gap-lg items-center">
+<a class="text-on-surface-variant font-medium hover:text-primary-container transition-colors duration-300" href="#">Home</a>
+<a class="text-on-surface-variant font-medium hover:text-primary-container transition-colors duration-300" href="#">Services</a>
+<a class="text-on-surface-variant font-medium hover:text-primary-container transition-colors duration-300" href="#">Assess Pain</a>
+<a class="text-on-surface-variant font-medium hover:text-primary-container transition-colors duration-300" href="#">Book Now</a>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md hover:bg-primary-container transition-all">Patient Portal</button>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary text-3xl">menu</span>
+</div>
+</div>
+</nav>
+<main class="relative min-h-screen flex items-center justify-center pt-24 pb-12 px-gutter overflow-hidden">
+<!-- Background Hero Image with Desert Aesthetics -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-20 filter grayscale-[20%]" data-alt="A serene and breathtaking wide-angle shot of the Sossusvlei sand dunes in Namibia during the golden hour. The soft morning light creates deep, dramatic shadows across the undulating red orange sand curves. The sky is a pale, hazy blue with no clouds, emphasizing the vastness and peaceful minimalist solitude of the desert landscape. The overall mood is quiet, premium, and restorative, aligning with a high-end healing aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFrf8rWahzjJv-d8KF_4tR1bc-DdU86lk9rCOr7SWJXpQ42urzykXJPz4eDP_XGAoLXVvshGc5xwJ-FjhAOJ7KjvLFJP1Q2gsZV076_91WR8DTy3-LsHQGEz0Tv27nqG9MW3Y5eWO78D6hQmrbxGbMBPZK7VZpVO4W9jMRhaM8Fin3WWifLrHvtnK2in6wKS9s962--9H9Rj05hxKE7RQAd7pdVFDJcNXQD91QymvOssDPGpE7tegkBN1jCjAg41T9ArPX6AJd1wh0"/>
+<div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background"></div>
+</div>
+<div class="relative z-20 max-w-4xl w-full">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Main Confirmation Bento Card -->
+<div class="md:col-span-8 glass-card rounded-3xl p-lg border border-outline-variant/30 shadow-2xl reveal-up">
+<div class="flex items-center gap-sm mb-md">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<span class="text-primary font-label-md tracking-widest">APPOINTMENT SECURED</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-md">
+                        Your healing journey <br/><span class="text-primary italic">begins here.</span>
+</h1>
+<p class="text-body-lg text-on-surface-variant mb-lg max-w-lg">
+                        We've confirmed your session. A detailed confirmation and preparation guide has been sent to your email.
+                    </p>
+<div class="flex flex-wrap gap-md">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-md flex items-center gap-2 hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-xl">calendar_add_on</span>
+                            Add to Calendar
+                        </button>
+<button class="border border-outline text-on-surface px-8 py-4 rounded-full font-label-md hover:bg-surface-variant transition-all">
+                            View Directions
+                        </button>
+</div>
+</div>
+<!-- Appointment Details Bento Card -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<div class="glass-card rounded-3xl p-md border border-outline-variant/30 flex-1 reveal-up stagger-1">
+<h3 class="font-label-md text-primary mb-md">DETAILS</h3>
+<div class="space-y-md">
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-on-surface-variant">schedule</span>
+<div>
+<p class="font-label-md text-on-surface">Thursday, Oct 24</p>
+<p class="text-sm text-on-surface-variant">09:15 AM — 10:15 AM</p>
+</div>
+</div>
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+<div>
+<p class="font-label-md text-on-surface">Dr. Aristhos Lukas</p>
+<p class="text-sm text-on-surface-variant">Senior Physiotherapist</p>
+</div>
+</div>
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-on-surface-variant">location_on</span>
+<div>
+<p class="font-label-md text-on-surface">Main Clinic</p>
+<p class="text-sm text-on-surface-variant">12 Dune Crescent, Swakopmund</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Shortcut Card -->
+<a class="bg-secondary-container hover:bg-secondary-fixed transition-colors rounded-3xl p-md border border-outline-variant/20 group reveal-up stagger-2" href="#">
+<div class="flex justify-between items-center">
+<div>
+<p class="font-label-md text-on-secondary-container">Patient Dashboard</p>
+<p class="text-sm text-on-secondary-container/80">Manage your health profile</p>
+</div>
+<span class="material-symbols-outlined text-on-secondary-container group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+</div>
+<!-- Bottom Decorative/Utility Grid -->
+<div class="md:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-gutter reveal-up stagger-3">
+<div class="bg-surface-container-low rounded-2xl p-md flex items-center gap-md">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">article</span>
+<p class="text-sm text-on-surface-variant">Complete your <span class="font-bold text-on-surface">Intake Form</span> before arrival.</p>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-md flex items-center gap-md">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">medical_services</span>
+<p class="text-sm text-on-surface-variant">Review our <span class="font-bold text-on-surface">Patient Care</span> protocols.</p>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-md flex items-center gap-md">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">chat_bubble</span>
+<p class="text-sm text-on-surface-variant">Need to reschedule? <span class="font-bold text-on-surface">Chat with us</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component Anchor) -->
+<footer class="w-full rounded-t-xl bg-secondary-container dark:bg-on-secondary-fixed mt-xl">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter py-xl gap-md max-w-container-max mx-auto opacity-90 hover:opacity-100 transition-all duration-300">
+<div class="flex flex-col items-center md:items-start gap-xs">
+<div class="font-headline-md text-headline-md text-primary tracking-tight">Sossus Physiotherapy</div>
+<p class="font-body-md text-body-md text-on-secondary-container/80">© 2024 Sossus Physiotherapy Namibia. Desert-Modern Healing.</p>
+</div>
+<div class="flex gap-lg">
+<a class="text-on-secondary-container/80 font-medium hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-secondary-container/80 font-medium hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-on-secondary-container/80 font-medium hover:text-primary transition-colors" href="#">Contact</a>
+<a class="text-on-secondary-container/80 font-medium hover:text-primary transition-colors" href="#">Our Team</a>
+</div>
+</div>
+</footer>
+<script>
+        // Subtle Mouse parallax for background
+        document.addEventListener('mousemove', (e) => {
+            const moveX = (e.clientX - window.innerWidth / 2) * 0.005;
+            const moveY = (e.clientY - window.innerHeight / 2) * 0.005;
+            const img = document.querySelector('img[data-alt]');
+            if(img) {
+                img.style.transform = `scale(1.1) translate(${moveX}px, ${moveY}px)`;
+            }
+        });
+
+        // Greeting animation check
+        window.addEventListener('load', () => {
+            console.log('Sossus Physiotherapy UI Initialized');
+        });
+    </script>
+</body></html>

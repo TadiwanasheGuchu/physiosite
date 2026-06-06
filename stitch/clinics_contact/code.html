@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clinics &amp; Contact | Sossus Physiotherapy</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: EB Garamond & Inter -->
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#091d2e",
+                    "tertiary-fixed": "#e4e2e2",
+                    "surface": "#f7f9ff",
+                    "secondary": "#675d4e",
+                    "inverse-primary": "#ffb595",
+                    "surface-container-highest": "#d1e4fb",
+                    "secondary-fixed-dim": "#d2c4b2",
+                    "background": "#f7f9ff",
+                    "surface-container-low": "#edf4ff",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-secondary-fixed-variant": "#4f4538",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#7c2e00",
+                    "on-background": "#091d2e",
+                    "tertiary-container": "#757474",
+                    "surface-container-high": "#d9eaff",
+                    "surface-container": "#e3efff",
+                    "outline": "#8c7166",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#6d6354",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#5c5c5c",
+                    "on-primary-container": "#fffbff",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#efe0cd",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#203243",
+                    "primary-fixed": "#ffdbcd",
+                    "secondary-container": "#efe0cd",
+                    "outline-variant": "#e0c0b2",
+                    "on-surface-variant": "#594238",
+                    "primary-container": "#c64f00",
+                    "primary-fixed-dim": "#ffb595",
+                    "on-secondary-fixed": "#221a0f",
+                    "on-primary-fixed": "#351000",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#e8f2ff",
+                    "surface-variant": "#d1e4fb",
+                    "surface-tint": "#a23f00",
+                    "on-tertiary-container": "#fefcfb",
+                    "surface-bright": "#f7f9ff",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "surface-dim": "#c9dcf3",
+                    "tertiary-fixed-dim": "#c8c6c6",
+                    "on-secondary": "#ffffff",
+                    "primary": "#9e3d00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xl": "80px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "sm": "12px",
+                    "md": "24px",
+                    "lg": "48px",
+                    "xs": "4px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "label-md": ["Inter"],
+                    "headline-md": ["EB Garamond"],
+                    "headline-lg-mobile": ["EB Garamond"],
+                    "headline-lg": ["EB Garamond"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["EB Garamond"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .desert-grain {
+            background-image: url("https://www.transparenttextures.com/patterns/sandpaper.png");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .bento-card {
+            background: rgba(239, 224, 205, 0.2);
+            border: 1px solid rgba(140, 113, 102, 0.15);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover {
+            border-color: rgba(158, 61, 0, 0.4);
+            transform: translateY(-4px);
+        }
+        .input-underline::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: #9e3d00;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        .input-underline:focus-within::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<div class="fixed inset-0 desert-grain z-0"></div>
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-xl border-b border-on-surface/10 dark:border-outline-variant/10 shadow-sm transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-gutter py-md max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md text-primary dark:text-inverse-primary tracking-tight" href="#">Sossus Physiotherapy</a>
+<div class="hidden md:flex items-center gap-lg">
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant font-medium hover:text-primary-container dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant font-medium hover:text-primary-container dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Services</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant font-medium hover:text-primary-container dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Assess Pain</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant font-medium hover:text-primary-container dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Book Now</a>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-md hover:bg-primary-container transition-all shadow-sm">Patient Portal</button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="relative z-10 pt-32 pb-xl">
+<div class="max-w-container-max mx-auto px-gutter">
+<!-- Header Section -->
+<div class="mb-lg max-w-2xl">
+<h1 class="font-display-lg text-display-lg text-primary mb-md">Our Clinics</h1>
+<p class="font-body-lg text-body-lg text-secondary mb-lg">Rooted in the tranquility of the Namib, our Windhoek sanctuary offers precision healing and desert-inspired hospitality. Find us at the heart of the capital.</p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md">
+<!-- Main Location Card (Large) -->
+<div class="md:col-span-8 bento-card rounded-xl p-lg flex flex-col md:flex-row gap-lg">
+<div class="flex-1 space-y-md">
+<div class="flex items-center gap-sm text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<h2 class="font-headline-md text-headline-md">Windhoek Central Clinic</h2>
+</div>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+                            Independence Avenue, Block C, Suite 402<br/>
+                            Windhoek, Namibia
+                        </p>
+<div class="pt-sm space-y-base">
+<div class="flex justify-between border-b border-outline-variant/30 pb-xs">
+<span class="font-medium">Mon - Fri</span>
+<span class="text-secondary">08:00 - 17:00</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/30 pb-xs">
+<span class="font-medium">Saturday</span>
+<span class="text-secondary">09:00 - 13:00</span>
+</div>
+<div class="flex justify-between">
+<span class="font-medium">Sunday</span>
+<span class="text-secondary italic">Closed</span>
+</div>
+</div>
+<div class="pt-md">
+<button class="w-full md:w-auto bg-primary text-on-primary px-lg py-md rounded-lg font-label-md hover:bg-primary-container transition-all flex items-center justify-center gap-sm group">
+                                Book Your Session
+                                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex-1 min-h-[300px] rounded-lg overflow-hidden relative">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A wide angle photograph of a modern, minimalist physiotherapy clinic interior in Windhoek. Large floor-to-ceiling windows reveal a soft desert light filtering through, illuminating a clean space with wooden accents, Kalahari sand-colored walls, and professional medical equipment. The atmosphere is calm, luxury-retreat inspired, and incredibly clean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3b_98iycLylI6CAZArrCyQGiARoZLczoYZa3H0QzY-5TD83C_8L8i8pK_HKmSf8MKX4Onyxv_o5Ww8LDQApEfhggvqwSBxmsj8G56Dw-I7bWPsMezP09QzeIrYXIETf8R_pT4DpvfjMLEsdjiv83LNLcpDE2pQ3RI5jvPAfFnt4A-9OMKYaztjjlm6RnaO0ANCslIFlPfEXfGGrQlSpWHZ1YkGLHdpXbk159AAZOoWldmB7y14RQ5RzYs9cAb7Gh31yaAOMHrTUJg"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+</div>
+<!-- Contact Info Card -->
+<div class="md:col-span-4 bento-card rounded-xl p-lg space-y-lg flex flex-col justify-center">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-md">Get in Touch</h3>
+<p class="font-body-md text-secondary">Immediate inquiries or specialized requests.</p>
+</div>
+<div class="space-y-md">
+<a class="flex items-center gap-md group" href="tel:+264812345678">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="text-xs font-label-md uppercase tracking-widest text-secondary">Phone</p>
+<p class="font-body-lg font-medium">+264 81 234 5678</p>
+</div>
+</a>
+<a class="flex items-center gap-md group" href="mailto:hello@sossusphysio.com">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-xs font-label-md uppercase tracking-widest text-secondary">Email</p>
+<p class="font-body-lg font-medium">care@sossusphysio.na</p>
+</div>
+</a>
+</div>
+<div class="pt-md border-t border-outline-variant/30">
+<div class="flex gap-sm">
+<div class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></div>
+<p class="text-xs font-label-md text-on-surface-variant">Emergency On-Call: +264 81 999 0000</p>
+</div>
+</div>
+</div>
+<!-- Inquiry Form (Bento Large) -->
+<div class="md:col-span-7 bento-card rounded-xl p-lg">
+<h3 class="font-headline-md text-headline-md text-primary mb-lg">General Inquiry</h3>
+<form class="space-y-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="relative input-underline">
+<input class="w-full bg-transparent border-0 border-b border-secondary/30 py-sm focus:ring-0 placeholder:text-secondary/50 font-body-md" placeholder="Full Name" type="text"/>
+</div>
+<div class="relative input-underline">
+<input class="w-full bg-transparent border-0 border-b border-secondary/30 py-sm focus:ring-0 placeholder:text-secondary/50 font-body-md" placeholder="Email Address" type="email"/>
+</div>
+</div>
+<div class="relative input-underline">
+<select class="w-full bg-transparent border-0 border-b border-secondary/30 py-sm focus:ring-0 text-secondary font-body-md appearance-none">
+<option disabled="" selected="" value="">Nature of Inquiry</option>
+<option value="sports">Sports Injury</option>
+<option value="rehab">Post-Surgery Rehab</option>
+<option value="chronic">Chronic Pain</option>
+<option value="other">General Question</option>
+</select>
+</div>
+<div class="relative input-underline">
+<textarea class="w-full bg-transparent border-0 border-b border-secondary/30 py-sm focus:ring-0 placeholder:text-secondary/50 font-body-md resize-none" placeholder="Your Message" rows="4"></textarea>
+</div>
+<button class="bg-secondary text-on-secondary px-xl py-md rounded-lg font-label-md hover:bg-on-surface transition-all" type="submit">
+                            Send Message
+                        </button>
+</form>
+</div>
+<!-- Map Section (Bento Small/Tall) -->
+<div class="md:col-span-5 rounded-xl overflow-hidden relative min-h-[400px]">
+<div class="absolute inset-0 bg-secondary-container/20">
+<!-- Mock Map Container -->
+<div class="w-full h-full bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-60" data-alt="A stylized aerial topographical map of Windhoek, Namibia. The visual style is clean and architectural, using a muted palette of granite greys and desert sands. Minimalist white lines mark Independence Avenue, with a single copper-toned pin marking the Sossus Physiotherapy location. The overall aesthetic is professional, sophisticated, and integrated with the brand's desert-modern identity." data-location="Windhoek" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiPWq6YuLgIx6FmxI7rSpjOYFGMOVAvhTPKauTlTG9iQ4RYPGCFztU32ZcZQ9XqU_Pjwv9Q5-w8mSOowNUXYsB_hMQifg8yxBXN8aePFuwVMMoVSLNcE5BDt46umVTgjVjG31zKcSCmo6aaR2Foautz5ZIKIMt-faBsNKM3-6iigAkFzozykFR-gjVKk0SJMD8sEePN5kCKURYOUCZCf0zEjii5BWxV9Z8kT5KTJ4w6Oheo0w9sBJXBdO0tqYGRcx6eg4YCwHqswIK"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="relative">
+<div class="w-12 h-12 bg-primary rounded-full animate-ping absolute opacity-20"></div>
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg relative z-10">
+<span class="material-symbols-outlined text-on-primary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+</div>
+<!-- Map Controls -->
+<div class="absolute bottom-md right-md flex flex-col gap-xs">
+<button class="w-10 h-10 bg-surface rounded shadow-md flex items-center justify-center text-primary hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="w-10 h-10 bg-surface rounded shadow-md flex items-center justify-center text-primary hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined">remove</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-xl bg-secondary-container dark:bg-on-secondary-fixed mt-xl">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter py-xl gap-md max-w-container-max mx-auto">
+<div class="space-y-sm">
+<h4 class="font-headline-md text-headline-md text-primary dark:text-inverse-primary">Sossus Physiotherapy</h4>
+<p class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed-dim max-w-sm">
+                    © 2024 Sossus Physiotherapy Namibia. Desert-Modern Healing.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-lg">
+<a class="text-on-secondary-container/80 hover:text-primary transition-colors font-body-md" href="#">Privacy Policy</a>
+<a class="text-on-secondary-container/80 hover:text-primary transition-colors font-body-md" href="#">Terms of Service</a>
+<a class="text-on-secondary-container/80 hover:text-primary transition-colors font-body-md" href="#">Contact</a>
+<a class="text-on-secondary-container/80 hover:text-primary transition-colors font-body-md" href="#">Our Team</a>
+</div>
+</div>
+</footer>
+<script>
+        // Subtle scroll animation for navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-sm', 'shadow-md');
+                nav.classList.remove('py-md', 'shadow-sm');
+            } else {
+                nav.classList.add('py-md', 'shadow-sm');
+                nav.classList.remove('py-sm', 'shadow-md');
+            }
+        });
+
+        // Form interaction micro-effects
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('text-primary');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.classList.remove('text-primary');
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Message Sent - Sossus Physiotherapy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .glass-panel {
+            background: rgba(247, 249, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        
+        .desert-grain {
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+
+        .kinetic-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .kinetic-hover:hover {
+            transform: translateY(-2px);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fade-in-up 0.8s ease-out forwards;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#c9dcf3",
+                        "on-surface": "#091d2e",
+                        "on-primary-fixed": "#351000",
+                        "surface-variant": "#d1e4fb",
+                        "primary-container": "#c64f00",
+                        "surface-tint": "#a23f00",
+                        "background": "#f7f9ff",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#e8f2ff",
+                        "inverse-surface": "#203243",
+                        "primary-fixed": "#ffdbcd",
+                        "secondary-container": "#efe0cd",
+                        "on-secondary-fixed-variant": "#4f4538",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f7f9ff",
+                        "primary": "#9e3d00",
+                        "outline": "#8c7166",
+                        "on-error": "#ffffff",
+                        "on-background": "#091d2e",
+                        "surface": "#f7f9ff",
+                        "secondary-fixed-dim": "#d2c4b2",
+                        "on-secondary-fixed": "#221a0f",
+                        "primary-fixed-dim": "#ffb595",
+                        "surface-container-low": "#edf4ff",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#e4e2e2",
+                        "on-tertiary-container": "#fefcfb",
+                        "tertiary": "#5c5c5c",
+                        "on-primary-container": "#fffbff",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#757474",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "secondary-fixed": "#efe0cd",
+                        "inverse-primary": "#ffb595",
+                        "on-primary-fixed-variant": "#7c2e00",
+                        "surface-container-highest": "#d1e4fb",
+                        "secondary": "#675d4e",
+                        "tertiary-fixed-dim": "#c8c6c6",
+                        "outline-variant": "#e0c0b2",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "surface-container": "#e3efff",
+                        "on-surface-variant": "#594238",
+                        "on-secondary-container": "#6d6354",
+                        "surface-container-high": "#d9eaff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "12px",
+                        "lg": "48px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "xl": "80px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["EB Garamond"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["EB Garamond"],
+                        "headline-lg": ["EB Garamond"],
+                        "display-lg": ["EB Garamond"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+<!-- Desert Texture Overlay -->
+<div class="fixed inset-0 desert-grain z-[-1]"></div>
+<!-- Navigation suppressed per rules for Transactional/Success screens -->
+<main class="min-h-screen flex items-center justify-center px-gutter relative overflow-hidden">
+<!-- Ambient Background Glow -->
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -mr-64 -mt-64"></div>
+<div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[120px] -ml-64 -mb-64"></div>
+<div class="max-w-4xl w-full z-10">
+<!-- Bento Layout Success Container -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter animate-fade-in-up">
+<!-- Main Message Block (8-col) -->
+<div class="md:col-span-8 glass-panel border border-on-surface/10 rounded-xl p-lg md:p-xl flex flex-col justify-center">
+<div class="mb-md">
+<span class="material-symbols-outlined text-primary text-5xl mb-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Message Sent.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                            Thank you for reaching out to Sossus Physiotherapy. We appreciate your interest in our desert-modern healing services. 
+                        </p>
+</div>
+<div class="space-y-sm mb-lg">
+<p class="font-body-md text-body-md text-on-surface-variant/80 italic">
+                            A member of our clinical team will review your inquiry and respond within 24 hours.
+                        </p>
+</div>
+<div>
+<a class="inline-flex items-center justify-center px-lg py-md bg-primary text-on-primary rounded-lg font-label-md text-label-md kinetic-hover shadow-lg shadow-primary/20" href="/">
+                            Return to Home
+                        </a>
+</div>
+</div>
+<!-- Secondary Info Block (4-col) -->
+<div class="md:col-span-4 space-y-gutter">
+<!-- Service Links Card -->
+<div class="bg-secondary-container/50 border border-on-surface/10 rounded-xl p-md">
+<h3 class="font-headline-md text-headline-md text-on-secondary-container mb-md !text-2xl">Quick Links</h3>
+<nav class="flex flex-col gap-sm">
+<a class="flex items-center justify-between p-sm rounded-lg hover:bg-white/40 transition-colors group" href="#">
+<span class="font-label-md text-label-md text-on-secondary-container/80">Sports Recovery</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="flex items-center justify-between p-sm rounded-lg hover:bg-white/40 transition-colors group" href="#">
+<span class="font-label-md text-label-md text-on-secondary-container/80">Chronic Pain</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="flex items-center justify-between p-sm rounded-lg hover:bg-white/40 transition-colors group" href="#">
+<span class="font-label-md text-label-md text-on-secondary-container/80">Post-Op Rehab</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</nav>
+</div>
+<!-- Visual Accent Card -->
+<div class="relative rounded-xl h-48 overflow-hidden group">
+<img alt="Healing Hands" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A close-up, artistic photograph of a physiotherapist's hands performing a gentle manual therapy technique on a patient's shoulder. The lighting is warm and golden, evocative of a late Namibian afternoon, creating a serene and professional clinical atmosphere. The color palette features soft earthy tones, copper accents, and pristine whites, maintaining a premium desert-modern aesthetic. The composition is clean and minimalist, focusing on the tactile sense of healing and precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASZ6lozFwqIG-FGeb0jOBAA0eXaHgog05vkrtuK5wQbo_SGDITp5onxRoQLS8U10GcN2bDXEn6l_Qi7539lTAiXa1405heXcn95xk94WHhnjAiSR16eSMTbpvXK6BD-RkPAqOS9iLfSOqmRhR4rzzHRAsL59m-X8LTZ7oBTlK3i1MyFX0MOt9uTrc73fIjWmdcSr3z3v853u3q86HEwBmxSC_cLwxUkU_dyHyEBJm9xjQ9rsmjZKHcgngLt5tl1qiJs_9kC4YSRviG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+<div class="absolute bottom-md left-md">
+<p class="font-headline-md text-headline-md text-white !text-xl">Restore Movement.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Component Integration -->
+<footer class="w-full rounded-t-xl bg-secondary-container dark:bg-on-secondary-fixed">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter py-xl gap-md max-w-container-max mx-auto">
+<div class="flex flex-col gap-xs items-center md:items-start">
+<span class="font-headline-md text-headline-md text-primary dark:text-inverse-primary tracking-tight">Sossus Physiotherapy</span>
+<p class="font-body-md text-body-md text-on-secondary-container/80">© 2024 Sossus Physiotherapy Namibia. Desert-Modern Healing.</p>
+</div>
+<nav class="flex gap-lg">
+<a class="font-body-md text-body-md text-on-secondary-container/80 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-secondary-container/80 hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-secondary-container/80 hover:text-primary transition-colors" href="#">Contact</a>
+<a class="font-body-md text-body-md text-on-secondary-container/80 hover:text-primary transition-colors" href="#">Our Team</a>
+</nav>
+</div>
+</footer>
+<script>
+        // Subtle Mouse Interaction for Glass Panel
+        document.addEventListener('mousemove', (e) => {
+            const panels = document.querySelectorAll('.glass-panel');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+
+            panels.forEach(panel => {
+                const moveX = (x - 0.5) * 10;
+                const moveY = (y - 0.5) * 10;
+                panel.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sossus Physiotherapy | Desert-Modern Healing</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#ffdbcd",
+                    "inverse-primary": "#ffb595",
+                    "on-secondary-fixed": "#221a0f",
+                    "outline": "#8c7166",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#efe0cd",
+                    "surface": "#f7f9ff",
+                    "inverse-surface": "#203243",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#edf4ff",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#091d2e",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-background": "#091d2e",
+                    "surface-variant": "#d1e4fb",
+                    "surface-container-high": "#d9eaff",
+                    "on-tertiary-container": "#fefcfb",
+                    "surface-bright": "#f7f9ff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#6d6354",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "tertiary-container": "#757474",
+                    "surface-container": "#e3efff",
+                    "surface-tint": "#a23f00",
+                    "on-primary-container": "#fffbff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#e0c0b2",
+                    "on-primary-fixed-variant": "#7c2e00",
+                    "secondary": "#675d4e",
+                    "primary": "#9e3d00",
+                    "on-surface-variant": "#594238",
+                    "secondary-fixed": "#efe0cd",
+                    "secondary-fixed-dim": "#d2c4b2",
+                    "background": "#f7f9ff",
+                    "surface-container-highest": "#d1e4fb",
+                    "inverse-on-surface": "#e8f2ff",
+                    "on-secondary-fixed-variant": "#4f4538",
+                    "tertiary-fixed": "#e4e2e2",
+                    "tertiary-fixed-dim": "#c8c6c6",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#c9dcf3",
+                    "primary-fixed-dim": "#ffb595",
+                    "primary-container": "#c64f00",
+                    "on-primary-fixed": "#351000",
+                    "tertiary": "#5c5c5c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "lg": "48px",
+                    "xs": "4px",
+                    "sm": "12px",
+                    "md": "24px",
+                    "xl": "80px",
+                    "base": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["EB Garamond"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["EB Garamond"],
+                    "display-lg": ["EB Garamond"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["EB Garamond"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grain-texture {
+            background-image: url("https://www.transparenttextures.com/patterns/p6.png");
+            mix-blend-mode: multiply;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(247,249,255,0) 0%, rgba(247,249,255,1) 100%);
+        }
+        .bento-card {
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .bento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px -10px rgba(158, 61, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-xl border-b border-on-surface/10 shadow-sm transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-gutter py-md max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-primary tracking-tight">
+                Sossus Physiotherapy
+            </div>
+<div class="hidden md:flex gap-lg items-center">
+<a class="text-primary font-bold border-b-2 border-primary hover:text-primary-container transition-colors duration-300" href="#">Home</a>
+<a class="text-on-surface-variant font-medium hover:text-primary-container transition-colors duration-300" href="#">Services</a>
+<a class="text-on-surface-variant font-medium hover:text-primary-container transition-colors duration-300" href="#">Assess Pain</a>
+<a class="text-on-surface-variant font-medium hover:text-primary-container transition-colors duration-300" href="#">Book Now</a>
+</div>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-full font-label-md text-label-md uppercase tracking-wider hover:bg-primary-container transition-all shadow-md active:scale-95">
+                Patient Portal
+            </button>
+</div>
+</nav>
+<main class="relative pt-24 overflow-hidden">
+<!-- Background Texture -->
+<div class="fixed inset-0 pointer-events-none grain-texture opacity-[0.03] z-[-1]"></div>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center px-gutter">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-xl items-center w-full">
+<div class="lg:col-span-7 space-y-md">
+<span class="inline-block px-4 py-1 border border-outline-variant text-primary font-label-md text-label-md rounded-full uppercase tracking-widest bg-secondary-container/30">
+                        Kinetic Hospitality
+                    </span>
+<h1 class="font-display-lg text-display-lg text-on-surface leading-tight tracking-tight">
+                        Restore Your <span class="text-primary italic">Movement</span>, <br/>Reclaim Your Horizon.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        A fusion of Namibian warmth and precision medical expertise. Experience a sanctuary designed for recovery, from the dunes to the city.
+                    </p>
+<div class="flex flex-wrap gap-md pt-base">
+<button class="bg-primary text-on-primary px-lg py-md rounded-lg font-label-md text-label-md transition-all hover:bg-primary-container hover:shadow-lg flex items-center gap-base">
+                            Book Initial Assessment
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border border-outline text-on-surface px-lg py-md rounded-lg font-label-md text-label-md transition-all hover:bg-secondary-container/20">
+                            Explore Therapies
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl relative group">
+<img alt="Luxury Clinic Interior" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A high-end physiotherapy clinic interior in Windhoek featuring warm sandstone walls, minimalist linen furniture, and floor-to-ceiling windows showing a desert horizon. The lighting is soft and golden hour inspired, reflecting a luxury retreat aesthetic. The scene is calm, professional, and sophisticated, utilizing the brand palette of copper and kalahari sand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDytCAju_ruvP2GE7o1srv29dmwsQmgZ1yIgG6cljYx_QUPKD5SIC5-GeXynwXWGpSb7Gw6vmLvtXJyhVUGHvKpIapQS-zFaNUsJYaZAcj9zhFId8g28ye5mHxxPRp7EGdMV62-KngJGjsgDavW0gINSXlPzVY7R13zsXVJheXr_9UeXb_VfzsaKDMkzm-dDMlG63F5KA62C4D2Cj-DhA-wtwZ13fafZZ15Rg_IjCy2NnOVYB_aIzg6r2rmBkHPQ_ZkHNcpdMLJHMr-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-40"></div>
+</div>
+<!-- Abstract Shape Overlay -->
+<div class="absolute -bottom-8 -right-8 w-48 h-48 bg-secondary-container rounded-full blur-3xl opacity-50 z-[-1]"></div>
+</div>
+</div>
+</section>
+<!-- Bento Box Grid: Active Empathy -->
+<section class="py-xl px-gutter bg-surface-container-low/50">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-xl gap-md">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Active Empathy</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-sm">Our philosophy integrates clinical precision with the tactile comfort of a retreat, ensuring your path to recovery is as restorative as it is effective.</p>
+</div>
+<div class="flex gap-base">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">spa</span>
+</div>
+</div>
+<!-- Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-md h-auto md:h-[600px]">
+<!-- Large Feature -->
+<div class="md:col-span-2 md:row-span-2 bento-card bg-white p-lg rounded-xl flex flex-col justify-between border border-on-surface/5 relative overflow-hidden">
+<div class="z-10">
+<span class="material-symbols-outlined text-primary text-5xl mb-md">orthopedics</span>
+<h3 class="font-headline-md text-headline-md mb-sm">Structural Integrity</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Comprehensive biomechanical analysis to identify the root cause of your pain, not just the symptoms.</p>
+</div>
+<div class="mt-lg z-10">
+<ul class="space-y-sm">
+<li class="flex items-center gap-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">circle</span>
+                                    3D Gait Analysis
+                                </li>
+<li class="flex items-center gap-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">circle</span>
+                                    Neuromuscular Re-education
+                                </li>
+</ul>
+</div>
+<img class="absolute bottom-0 right-0 w-2/3 opacity-10 pointer-events-none" data-alt="An abstract minimalist close-up of human muscle fibers and structural movement, rendered in a warm, artistic style using copper and sand tones. The image is sophisticated and medical yet looks like high-end gallery art, matching the desert-modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL1vkcj5kr6WQhJH5jGn4P26OBNifOTMWamZBEz7r1CA9bgkHNqeRbAdNWTIw4KpT1YgcZj_B1IJEoTrUY9xaRrUzVvq3OH1OpFjjOKSyR2yEpdfBOrw_q353eUEqihDCVh9AOaLuDfas47DMx4ycERTbCeSUVyR2ey--Q02vgTE0jNFpdHjOCLMtejZ-8tEg-HE6-x41qZW4Kos36YqmxCqhaxC2WH6e6SpyaVue1kQPnqJH-L9pAE-O5flr8sMa1KEMOXPNlNvSJ"/>
+</div>
+<!-- Medium Feature -->
+<div class="md:col-span-2 bento-card bg-secondary-container p-lg rounded-xl flex items-center gap-md border border-on-surface/5">
+<div class="flex-1">
+<h3 class="font-headline-md text-headline-md mb-sm">The Oasis Room</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Private treatment suites utilizing heat therapy and linen-wrapped comfort for deep recovery.</p>
+</div>
+<div class="w-1/3 aspect-square rounded-lg overflow-hidden hidden sm:block">
+<img class="w-full h-full object-cover" data-alt="A tranquil, minimalist treatment room with soft linen curtains, warm wooden accents, and a plush medical bed. Sunlight filters through a textured window, creating long, peaceful shadows. The environment feels more like a five-star spa than a clinic, embodying the kinetic hospitality brand pillar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGrqbXZi2S2pRZOUAy33Qwp3YUhYhy3ZBG3mXPdKmPt_ZPGAiq4iRriluuFu08WPDbp6h3gyXXwfvUAmuW63cs_YllrecDe7lMylyyabllKgbiscMChAFoUDzSWWHkeRzZk_E1FP8rAuLR2uo2ZU83l4Ll6CYr36rTa6iwt1d5iR7G_f9xCsWXTlF4nRjHDJgCxVXB_o__pA7Km6Pay8lt8UNL5LuWmMV-7Kh0mL0Uyi89lTa5QvXwJE_8cyB8qkBs-FJugHwOVWyy"/>
+</div>
+</div>
+<!-- Small Features -->
+<div class="bento-card bg-surface p-lg rounded-xl border border-on-surface/5 flex flex-col justify-center">
+<span class="material-symbols-outlined text-primary mb-sm">fitness_center</span>
+<h4 class="font-bold text-lg">Rehab Gym</h4>
+<p class="text-sm text-on-surface-variant">State-of-the-art equipment for functional return.</p>
+</div>
+<div class="bento-card bg-primary text-on-primary p-lg rounded-xl flex flex-col justify-center shadow-lg">
+<span class="material-symbols-outlined mb-sm text-3xl">event_available</span>
+<h4 class="font-bold text-lg">Instant Booking</h4>
+<p class="text-sm opacity-90">View real-time availability for our Windhoek clinic.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Philosophy: Kinetic Hospitality -->
+<section class="py-xl px-gutter overflow-hidden">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="relative">
+<div class="aspect-video rounded-2xl overflow-hidden shadow-xl">
+<img class="w-full h-full object-cover" data-alt="A cinematic wide shot of a physiotherapist working with a client in a modern, light-filled space with sandstone pillars. The interaction is focused and professional, capturing the 'active empathy' philosophy. The color palette is dominated by soft creams, deep slate, and glowing copper accents from the Namibian sun." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBowrCFiq1aHlZ7zVm0eXxs8qT9KAXBVrcdmu4JFXb5JKwn-HGiJOeX4YZbQgQ7_l-g-psKgy4Hb-OP9w46U06ZrMpBTMkNpXX_tL56d7Z06sFD0JWn6yfB_7r5SjmreaPvPf2oyJMWmGopg8anLEr8b0miOhpj9wXLg09X7btnM4bLGhEzZXHbCLc-_NY-8ao-GqY9uuij_fPphGKS3H4Q8sBU-0LHC1vkLQ4yBsd7sqyn6N2EmOA_OANnE1XpOweuTiDhs_G_8Vx5"/>
+</div>
+<!-- Decorative Float -->
+<div class="absolute -top-10 -left-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+</div>
+<div class="space-y-md">
+<h2 class="font-headline-lg text-headline-lg">Our Philosophy</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                            We believe healing is a sensory experience. Sossus Physiotherapy was born from the realization that clinical excellence often lacks the human warmth necessary for holistic recovery.
+                        </p>
+<div class="space-y-sm">
+<div class="flex gap-md">
+<span class="text-primary font-bold text-xl">01</span>
+<div>
+<h4 class="font-bold text-lg">Personalized Trajectories</h4>
+<p class="text-on-surface-variant">Every patient receives a unique recovery roadmap, tailored to their lifestyle and movement goals.</p>
+</div>
+</div>
+<div class="flex gap-md">
+<span class="text-primary font-bold text-xl">02</span>
+<div>
+<h4 class="font-bold text-lg">Integrated Modalities</h4>
+<p class="text-on-surface-variant">Combining manual therapy, dry needling, and exercise science for a 360-degree approach.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Expert Care Section -->
+<section class="py-xl px-gutter bg-surface-container-highest/30">
+<div class="max-w-container-max mx-auto text-center">
+<h2 class="font-headline-lg text-headline-lg mb-xl">Expert Care, Namibian Roots</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Specialist Card -->
+<div class="bg-white p-lg rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-md border-4 border-secondary-container">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a friendly female physiotherapist in clinical attire, with a warm and confident expression. The background is a blurred high-end office with soft sandstone textures and warm lighting, aligning with the brand's sophisticated desert-modern visual identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfbRKvHBiAoNLZiq3kuhSekF8scImYNaOzFxidiH3wtVcB6KYe6MpeCRY7uviSkqK8J82t18zikEC3szidxeQkgReFGHeLrs-A6XttrwzoeISSU6u6Csf6DdAgqOP3oVcC1H_Kf-oz4oMScQr-h-XrlTD_cq3AFAV-9B9LHqV8NiO4vtDckbIRxtacf5Dm4BlghxSYaEP43mX6g6Kr3fs_4nMeHRlLRuIC-eklZe5juGOktYFzmRbCd0DsOHmvVkaaedXYYF1HH78H"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Dr. Elina Shikongo</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mb-sm">SENIOR CLINICIAN</p>
+<p class="text-sm text-on-surface-variant px-md">Specializing in Sports Rehabilitation and Post-Surgical Recovery with over 12 years of experience.</p>
+</div>
+<!-- Specialist Card -->
+<div class="bg-white p-lg rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-md border-4 border-secondary-container">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a male physiotherapist in a modern medical setting. He is smiling warmly, projecting confidence and empathy. The lighting is bright and airy, reflecting a professional yet welcoming atmosphere that matches the clinic's luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMSrBLw98ldrxaP9pNm350dy4g5mWoUxej2ZDQmxRFOJDfZghWQL6hF8e3ToxouNSlarBWgbz2e4VdIc8s8EDyy4_RgS4gJ9psDXANnGHNzXiRd9XDXR7Ok8K2OSZI6N7E9z_BSVqCdE8xdUZwJrpNt8d9xy5NN-v_YZS6Y8jr2iqzQmd8ueGNDqIrycXR0gN7HBIBiciV3c3mzcCasTSp57Idx1qEewVZVfpYznFjwMLO1FOqOsoPvGRtFDA4Pp_qT3kwC-P8ZzX_"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Johann Pretorius</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mb-sm">MOVEMENT SPECIALIST</p>
+<p class="text-sm text-on-surface-variant px-md">Expert in spinal health and functional mobility for chronic pain management.</p>
+</div>
+<!-- Specialist Card -->
+<div class="bg-white p-lg rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-md border-4 border-secondary-container">
+<img class="w-full h-full object-cover" data-alt="A professional female physiotherapist posing in a clean, high-end medical environment. The scene is bright, modern, and utilizes the soft color palette of the desert-modern style. Her expression is one of calm expertise, fitting the clinical yet hospitable brand message." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3FSmk6515EViUt4q2iFF_BvfYdWx_bdStdLLWJOB8eExWxJym2o3RhZv8jEptiqqtNdqw6gjGpXrqullAuNYlG3uxGKtRzjp9XUV2-iT5hgg2QmhwfxiW0y4Bv1-on3ztsDO4mvPSeUWe7pse-8zuNRa2cvkyNiGjO4QxVNOeMShHGIk-BFuLiHUqL6gTb1c3go8xVtHZi2a-FxeBP2hLDBn4d7OiPiXGeWaBVQ6TaZ2n2B9SUYhbk8vQtGP63V_NXuG-Pgf-qMNb"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Sarah Nel</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mb-sm">PEDIATRIC CARE</p>
+<p class="text-sm text-on-surface-variant px-md">Dedicated to developmental movement and athletic growth in young patients.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA: Patient Portal -->
+<section class="py-xl px-gutter relative overflow-hidden">
+<div class="max-w-4xl mx-auto bg-primary text-on-primary rounded-3xl p-xl text-center relative z-10 shadow-2xl">
+<div class="absolute inset-0 grain-texture opacity-10 pointer-events-none"></div>
+<h2 class="font-display-lg text-headline-lg mb-md">Ready to begin your journey?</h2>
+<p class="font-body-lg text-body-lg mb-xl opacity-90">Access your personalized exercise plan, book sessions, and chat with your therapist directly through our secure patient portal.</p>
+<div class="flex flex-col sm:flex-row gap-md justify-center">
+<button class="bg-on-primary text-primary px-xl py-md rounded-lg font-bold hover:bg-primary-fixed transition-all flex items-center justify-center gap-base">
+                        Login to Portal
+                        <span class="material-symbols-outlined">login</span>
+</button>
+<button class="border border-on-primary text-on-primary px-xl py-md rounded-lg font-bold hover:bg-white/10 transition-all">
+                        New Patient? Sign Up
+                    </button>
+</div>
+</div>
+<!-- Atmospheric Glow -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/5 blur-full rounded-full z-0"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-xl bg-secondary-container dark:bg-on-secondary-fixed mt-xl">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter py-xl gap-md max-w-container-max mx-auto">
+<div class="space-y-sm text-center md:text-left">
+<div class="font-headline-md text-headline-md text-primary tracking-tight">
+                    Sossus Physiotherapy
+                </div>
+<p class="text-on-secondary-container/80 font-body-md text-body-md">
+                    © 2024 Sossus Physiotherapy Namibia. Desert-Modern Healing.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="text-on-secondary-container/80 font-body-md text-body-md hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-secondary-container/80 font-body-md text-body-md hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-on-secondary-container/80 font-body-md text-body-md hover:text-primary transition-colors" href="#">Contact</a>
+<a class="text-on-secondary-container/80 font-body-md text-body-md hover:text-primary transition-colors" href="#">Our Team</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for the navigation scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-sm', 'shadow-md');
+                nav.classList.remove('py-md', 'shadow-sm');
+            } else {
+                nav.classList.add('py-md', 'shadow-sm');
+                nav.classList.remove('py-sm', 'shadow-md');
+            }
+        });
+
+        // Add some subtle parallax to hero
+        window.addEventListener('mousemove', (e) => {
+            const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+            const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+            const heroImg = document.querySelector('section img');
+            if (heroImg) {
+                heroImg.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.05)`;
+            }
+        });
+    </script>
+</body></html>

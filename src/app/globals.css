@@ -1,26 +1,209 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ============================================================
+   DESERT-MODERN DESIGN TOKENS
+   Source: stitch/desert_modern_wellness/DESIGN.md
+   ============================================================ */
+
+@theme {
+  /* --- Colors: Surfaces --- */
+  --color-surface:                    #f7f9ff;
+  --color-surface-dim:                #c9dcf3;
+  --color-surface-bright:             #f7f9ff;
+  --color-surface-container-lowest:   #ffffff;
+  --color-surface-container-low:      #edf4ff;
+  --color-surface-container:          #e3efff;
+  --color-surface-container-high:     #d9eaff;
+  --color-surface-container-highest:  #d1e4fb;
+  --color-surface-variant:            #d1e4fb;
+  --color-surface-tint:               #a23f00;
+  --color-background:                 #f7f9ff;
+
+  /* --- Colors: On-surfaces --- */
+  --color-on-surface:                 #091d2e;
+  --color-on-surface-variant:         #594238;
+  --color-on-background:              #091d2e;
+  --color-inverse-surface:            #203243;
+  --color-inverse-on-surface:         #e8f2ff;
+
+  /* --- Colors: Primary (Sossusvlei Copper) --- */
+  --color-primary:                    #9e3d00;
+  --color-on-primary:                 #ffffff;
+  --color-primary-container:          #c64f00;
+  --color-on-primary-container:       #fffbff;
+  --color-inverse-primary:            #ffb595;
+  --color-primary-fixed:              #ffdbcd;
+  --color-primary-fixed-dim:          #ffb595;
+  --color-on-primary-fixed:           #351000;
+  --color-on-primary-fixed-variant:   #7c2e00;
+
+  /* --- Colors: Secondary (Kalahari Sand) --- */
+  --color-secondary:                  #675d4e;
+  --color-on-secondary:               #ffffff;
+  --color-secondary-container:        #efe0cd;
+  --color-on-secondary-container:     #6d6354;
+  --color-secondary-fixed:            #efe0cd;
+  --color-secondary-fixed-dim:        #d2c4b2;
+  --color-on-secondary-fixed:         #221a0f;
+  --color-on-secondary-fixed-variant: #4f4538;
+
+  /* --- Colors: Tertiary (Granite Grey) --- */
+  --color-tertiary:                   #5c5c5c;
+  --color-on-tertiary:                #ffffff;
+  --color-tertiary-container:         #757474;
+  --color-on-tertiary-container:      #fefcfb;
+  --color-tertiary-fixed:             #e4e2e2;
+  --color-tertiary-fixed-dim:         #c8c6c6;
+  --color-on-tertiary-fixed:          #1b1c1c;
+  --color-on-tertiary-fixed-variant:  #474747;
+
+  /* --- Colors: Outline --- */
+  --color-outline:                    #8c7166;
+  --color-outline-variant:            #e0c0b2;
+
+  /* --- Colors: Error --- */
+  --color-error:                      #ba1a1a;
+  --color-on-error:                   #ffffff;
+  --color-error-container:            #ffdad6;
+  --color-on-error-container:         #93000a;
+
+  /* --- Spacing --- */
+  --spacing-xs:            4px;
+  --spacing-sm:            12px;
+  --spacing-base:          8px;
+  --spacing-md:            24px;
+  --spacing-lg:            48px;
+  --spacing-xl:            80px;
+  --spacing-gutter:        24px;
+  --spacing-container-max: 1280px;
+
+  /* --- Font Sizes (with line-height baked in) --- */
+  --text-display-lg:              4rem;
+  --text-display-lg--line-height: 1.1;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 500;
+
+  --text-headline-lg:              3rem;
+  --text-headline-lg--line-height: 1.2;
+  --text-headline-lg--font-weight: 500;
+
+  --text-headline-lg-mobile:              2rem;
+  --text-headline-lg-mobile--line-height: 1.2;
+  --text-headline-lg-mobile--font-weight: 500;
+
+  --text-headline-md:              2rem;
+  --text-headline-md--line-height: 1.3;
+  --text-headline-md--font-weight: 500;
+
+  --text-body-lg:              1.125rem;
+  --text-body-lg--line-height: 1.6;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-md:              1rem;
+  --text-body-md--line-height: 1.6;
+  --text-body-md--font-weight: 400;
+
+  --text-label-md:              0.875rem;
+  --text-label-md--line-height: 1.2;
+  --text-label-md--letter-spacing: 0.05em;
+  --text-label-md--font-weight: 600;
 }
 
+/* Font families reference CSS vars injected by next/font at runtime */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display-lg:        var(--font-eb-garamond), "EB Garamond", serif;
+  --font-headline-lg:       var(--font-eb-garamond), "EB Garamond", serif;
+  --font-headline-lg-mobile: var(--font-eb-garamond), "EB Garamond", serif;
+  --font-headline-md:       var(--font-eb-garamond), "EB Garamond", serif;
+  --font-body-lg:           var(--font-inter), "Inter", sans-serif;
+  --font-body-md:           var(--font-inter), "Inter", sans-serif;
+  --font-label-md:          var(--font-inter), "Inter", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* ============================================================
+   GLOBAL STYLES
+   ============================================================ */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-inter), "Inter", sans-serif;
+}
+
+::selection {
+  background-color: var(--color-primary-fixed);
+  color: var(--color-on-primary-fixed);
+}
+
+/* ============================================================
+   MATERIAL SYMBOLS
+   ============================================================ */
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ============================================================
+   COMPONENT CSS
+   These classes are used across the stitch HTML prototypes
+   and cannot be expressed as Tailwind utilities alone.
+   ============================================================ */
+
+/* Grain texture overlay — applied at 3% opacity on top of the page background */
+.grain-texture {
+  background-image: url("https://www.transparenttextures.com/patterns/p6.png");
+  mix-blend-mode: multiply;
+}
+
+/* Bento card — the core content module with lift-on-hover */
+.bento-card {
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px -10px rgba(158, 61, 0, 0.15);
+}
+
+/* Glass panel — backdrop blur overlay for the pain assessment tool */
+.glass-panel {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Pain point pulse — pulsing copper dot animation on the body diagram */
+.pain-point-pulse {
+  animation: pulse-copper 2s infinite;
+}
+@keyframes pulse-copper {
+  0%   { transform: scale(1);   opacity: 0.8; }
+  50%  { transform: scale(1.5); opacity: 0.3; }
+  100% { transform: scale(1);   opacity: 0.8; }
+}
+
+/* Step transition — used between pain assessment steps */
+.step-transition {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================================
+   MAX-WIDTH FIX
+   Tailwind v4 uses one unified --spacing-* scale for ALL sizing
+   utilities. Defining --spacing-xl: 80px (for py-xl, gap-xl etc.)
+   accidentally makes max-w-xl = 80px instead of the standard 36rem.
+   These @layer utilities overrides restore the Tailwind v3 max-width
+   scale values so both systems can coexist.
+   ============================================================ */
+
+@layer utilities {
+  .max-w-xs  { max-width: 20rem;  } /* 320px  */
+  .max-w-sm  { max-width: 24rem;  } /* 384px  */
+  .max-w-md  { max-width: 28rem;  } /* 448px  */
+  .max-w-lg  { max-width: 32rem;  } /* 512px  */
+  .max-w-xl  { max-width: 36rem;  } /* 576px  */
+  .max-w-2xl { max-width: 42rem;  } /* 672px  */
+  .max-w-3xl { max-width: 48rem;  } /* 768px  */
+  .max-w-4xl { max-width: 56rem;  } /* 896px  */
+  .max-w-5xl { max-width: 64rem;  } /* 1024px */
+  .max-w-6xl { max-width: 72rem;  } /* 1152px */
+  .max-w-7xl { max-width: 80rem;  } /* 1280px */
 }

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lost in the Dunes | Sossus Physiotherapy</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#c9dcf3",
+                    "on-surface": "#091d2e",
+                    "on-primary-fixed": "#351000",
+                    "surface-variant": "#d1e4fb",
+                    "primary-container": "#c64f00",
+                    "surface-tint": "#a23f00",
+                    "background": "#f7f9ff",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#e8f2ff",
+                    "inverse-surface": "#203243",
+                    "primary-fixed": "#ffdbcd",
+                    "secondary-container": "#efe0cd",
+                    "on-secondary-fixed-variant": "#4f4538",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f7f9ff",
+                    "primary": "#9e3d00",
+                    "outline": "#8c7166",
+                    "on-error": "#ffffff",
+                    "on-background": "#091d2e",
+                    "surface": "#f7f9ff",
+                    "secondary-fixed-dim": "#d2c4b2",
+                    "on-secondary-fixed": "#221a0f",
+                    "primary-fixed-dim": "#ffb595",
+                    "surface-container-low": "#edf4ff",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#e4e2e2",
+                    "on-tertiary-container": "#fefcfb",
+                    "tertiary": "#5c5c5c",
+                    "on-primary-container": "#fffbff",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#757474",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "secondary-fixed": "#efe0cd",
+                    "inverse-primary": "#ffb595",
+                    "on-primary-fixed-variant": "#7c2e00",
+                    "surface-container-highest": "#d1e4fb",
+                    "secondary": "#675d4e",
+                    "tertiary-fixed-dim": "#c8c6c6",
+                    "outline-variant": "#e0c0b2",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "surface-container": "#e3efff",
+                    "on-surface-variant": "#594238",
+                    "on-secondary-container": "#6d6354",
+                    "surface-container-high": "#d9eaff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "lg": "48px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "xl": "80px",
+                    "base": "8px",
+                    "xs": "4px",
+                    "md": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": ["EB Garamond"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["EB Garamond"],
+                    "headline-lg": ["EB Garamond"],
+                    "display-lg": ["EB Garamond"],
+                    "label-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .grain-texture {
+            position: relative;
+        }
+        .grain-texture::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            opacity: 0.03;
+            pointer-events: none;
+            background-image: url("https://www.transparenttextures.com/patterns/sandpaper.png");
+        }
+        .kinetic-hover {
+            transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s ease;
+        }
+        .kinetic-hover:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md grain-texture min-h-screen flex flex-col overflow-x-hidden">
+<!-- TopNavBar (Shared Component Execution) -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-xl border-b border-on-surface/10 dark:border-outline-variant/10 shadow-sm">
+<nav class="flex justify-between items-center px-gutter py-md max-w-container-max mx-auto transition-all duration-300 ease-in-out">
+<div class="font-headline-md text-headline-md text-primary dark:text-inverse-primary tracking-tight">
+                Sossus Physiotherapy
+            </div>
+<div class="hidden md:flex items-center gap-lg">
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant font-medium hover:text-primary-container dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant font-medium hover:text-primary-container dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Services</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant font-medium hover:text-primary-container dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Assess Pain</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant font-medium hover:text-primary-container dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Book Now</a>
+</div>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-full font-label-md hover:bg-primary-container transition-all shadow-sm">
+                Patient Portal
+            </button>
+</nav>
+</header>
+<!-- Main Content: 404 Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center pt-xl px-gutter relative">
+<!-- Background Lighting Effect -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden">
+<div class="absolute top-1/4 -right-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 -left-1/4 w-[600px] h-[600px] bg-secondary-container/10 rounded-full blur-[120px]"></div>
+</div>
+<div class="max-w-container-max w-full grid grid-cols-1 md:grid-cols-12 gap-md items-center z-10">
+<!-- Bento Error Message -->
+<div class="md:col-span-7 flex flex-col items-start gap-md">
+<span class="font-label-md text-label-md text-primary bg-primary/10 px-md py-xs rounded-full inline-block">
+                    ERROR 404
+                </span>
+<h1 class="font-display-lg text-display-lg text-on-surface leading-tight">
+                    Lost in the <br/><span class="italic text-primary">Dunes?</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    Like the shifting sands of the Namib, the path you were seeking has transformed. Even in moments of disorientation, we believe in mindful recovery and finding your center.
+                </p>
+<div class="flex flex-wrap gap-md mt-sm">
+<a class="group relative bg-primary text-on-primary px-lg py-md rounded-lg font-label-md overflow-hidden transition-all duration-500 hover:shadow-xl" href="#">
+<span class="relative z-10 flex items-center gap-xs">
+                            RETURN TO HORIZON
+                            <span class="material-symbols-outlined text-[18px]">east</span>
+</span>
+<div class="absolute inset-0 bg-primary-container scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
+</a>
+<a class="border border-outline px-lg py-md rounded-lg font-label-md text-on-surface hover:bg-surface-variant/20 transition-all" href="#">
+                        VIEW SERVICES
+                    </a>
+</div>
+<!-- Navigation Shortcuts (Bento Style) -->
+<div class="grid grid-cols-2 md:grid-cols-3 gap-sm w-full mt-lg">
+<div class="p-md rounded-xl bg-surface-container-low border border-outline/10 kinetic-hover">
+<span class="material-symbols-outlined text-primary mb-xs">home</span>
+<h3 class="font-label-md text-on-surface">Home</h3>
+<p class="text-[12px] text-on-surface-variant">Back to start</p>
+</div>
+<div class="p-md rounded-xl bg-surface-container-low border border-outline/10 kinetic-hover">
+<span class="material-symbols-outlined text-primary mb-xs">medical_services</span>
+<h3 class="font-label-md text-on-surface">Services</h3>
+<p class="text-[12px] text-on-surface-variant">Healing paths</p>
+</div>
+<div class="p-md rounded-xl bg-surface-container-low border border-outline/10 kinetic-hover col-span-2 md:col-span-1">
+<span class="material-symbols-outlined text-primary mb-xs">contact_support</span>
+<h3 class="font-label-md text-on-surface">Contact</h3>
+<p class="text-[12px] text-on-surface-variant">Need guidance?</p>
+</div>
+</div>
+</div>
+<!-- Visual Component -->
+<div class="md:col-span-5 relative group">
+<div class="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl relative">
+<img class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-110" data-alt="A cinematic, high-end photograph of the Namib Desert at golden hour. Massive, elegant sand dunes curve with perfect sculptural precision, casting long deep shadows in a palette of burnt orange, sossusvlei copper, and deep slate. The lighting is soft and ethereal, mimicking a luxury retreat atmosphere. The image is minimalist yet powerful, evoking a sense of calm and vastness that aligns with a premium physical therapy brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt2N3r2ZIiACSQs-6FxjfTgkP9g34PmNcQLb2ARGh0z51kIFAGGABh8iRZsggQaPghyYuadr0_CJzoazUpe4qLXPnEQgONFhU2yC2OsKfg87aww9_2yfUPtnhyDCvQ_6D1l2oOWixUuZctOVGOvg6psNZTiasToAKDVZADKdUdlJi6LmCkX0vU8XGPC04WDuq2XC8qgkeE8ch19DXzuVMIOP5MjQoSs3edIuBqkHgYQgIcC2pcZn5bJ8B_9JgtxTs8H4eSNCY2806D"/>
+<!-- Overlay Glass Card -->
+<div class="absolute bottom-md left-md right-md p-md glass-nav bg-white/10 rounded-2xl border border-white/20 text-white backdrop-blur-md">
+<p class="font-headline-md text-[24px] mb-xs italic">Namib-Naukluft</p>
+<p class="font-body-md text-[14px] opacity-80">Finding stillness in the expanse.</p>
+</div>
+</div>
+<!-- Abstract Shape Element -->
+<div class="absolute -top-lg -right-lg w-24 h-24 border-t-2 border-r-2 border-primary/30 rounded-tr-3xl hidden md:block"></div>
+<div class="absolute -bottom-sm -left-sm w-32 h-32 border-b-2 border-l-2 border-secondary/20 rounded-bl-3xl hidden md:block"></div>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component Execution) -->
+<footer class="w-full rounded-t-xl bg-secondary-container dark:bg-on-secondary-fixed mt-xl">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter py-xl gap-md max-w-container-max mx-auto opacity-90 hover:opacity-100 transition-opacity">
+<div class="flex flex-col gap-sm items-center md:items-start">
+<div class="font-headline-md text-headline-md text-primary dark:text-inverse-primary">
+                    Sossus Physiotherapy
+                </div>
+<p class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed-dim">
+                    © 2024 Sossus Physiotherapy Namibia. Desert-Modern Healing.
+                </p>
+</div>
+<div class="flex gap-lg">
+<a class="text-on-secondary-container/80 hover:text-primary transition-colors font-body-md text-body-md" href="#">Privacy Policy</a>
+<a class="text-on-secondary-container/80 hover:text-primary transition-colors font-body-md text-body-md" href="#">Terms of Service</a>
+<a class="text-on-secondary-container/80 hover:text-primary transition-colors font-body-md text-body-md" href="#">Contact</a>
+<a class="text-on-secondary-container/80 hover:text-primary transition-colors font-body-md text-body-md" href="#">Our Team</a>
+</div>
+</div>
+</footer>
+<!-- Interactive Layer: Mouse-aware background shift -->
+<script>
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth) * 20;
+            const y = (e.clientY / window.innerHeight) * 20;
+            const visual = document.querySelector('img[data-alt]');
+            if (visual) {
+                visual.style.transform = `scale(1.05) translate(${x}px, ${y}px)`;
+            }
+        });
+    </script>
+</body></html>
