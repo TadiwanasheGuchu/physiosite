@@ -7,7 +7,7 @@ export default function LegalPage() {
   const dataRef = useRef<HTMLDivElement>(null);
   const securityRef = useRef<HTMLDivElement>(null);
   const termsRef = useRef<HTMLElement>(null);
-  const sessionsRef = useRef<HTMLDivElement>(null);
+  const sessionsRef = useRef<HTMLElement>(null);
   const liabilityRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
