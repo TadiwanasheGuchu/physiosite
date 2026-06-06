@@ -7,7 +7,7 @@ export default function LegalPage() {
   const dataRef = useRef<HTMLDivElement>(null);
   const securityRef = useRef<HTMLDivElement>(null);
   const termsRef = useRef<HTMLElement>(null);
-  const sessionsRef = useRef<HTMLElement>(null);
+  const sessionsRef = useRef<HTMLDivElement>(null);
   const liabilityRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -218,10 +218,9 @@ export default function LegalPage() {
                 2. Terms of Service
               </h2>
               <div className="space-y-md font-body-lg text-body-lg leading-relaxed text-on-surface-variant">
+                <div ref={sessionsRef} id="sessions" className="scroll-mt-32">
                 <blockquote
-                  ref={sessionsRef}
-                  id="sessions"
-                  className="p-md bg-white/50 rounded-lg border border-outline-variant/20 italic scroll-mt-32"
+                  className="p-md bg-white/50 rounded-lg border border-outline-variant/20 italic"
                 >
                   <p className="mb-sm">
                     &ldquo;Engagement with Sossus Physiotherapy constitutes a
@@ -232,6 +231,7 @@ export default function LegalPage() {
                     — Clinical Charter
                   </footer>
                 </blockquote>
+                </div>
                 <p>
                   By scheduling a session, you agree to our 24-hour
                   cancellation policy. In the rhythmic nature of our practice,
