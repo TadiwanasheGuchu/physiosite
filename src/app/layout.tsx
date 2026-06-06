@@ -47,7 +47,7 @@ export default function RootLayout({
           aria-hidden="true"
         />
         <Nav />
-        <main className="relative pt-24 overflow-hidden min-h-svh">
+        <main className="relative pt-24 overflow-x-hidden min-h-svh">
           {children}
         </main>
         <Footer />

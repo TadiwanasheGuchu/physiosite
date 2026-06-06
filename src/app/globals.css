@@ -155,6 +155,51 @@ body {
   mix-blend-mode: multiply;
 }
 
+/* Glass card — frosted glass content module used on Services page */
+.glass-card {
+  background: rgba(247, 249, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(74, 74, 74, 0.1);
+  transition: all 0.5s ease;
+}
+.inner-glow:hover {
+  box-shadow: inset 0 0 10px rgba(158, 61, 0, 0.1);
+}
+
+/* Input underline — animated copper underline for Contact form fields */
+.input-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #9e3d00;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+.input-underline:focus-within::after {
+  width: 100%;
+}
+
+/* Fade-in-up — used on Contact/Sent confirmation page */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+/* Kinetic hover — subtle lift on interactive cards */
+.kinetic-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.kinetic-hover:hover {
+  transform: translateY(-2px);
+}
+
 /* Bento card — the core content module with lift-on-hover */
 .bento-card {
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
