@@ -167,6 +167,21 @@ body {
   box-shadow: inset 0 0 10px rgba(158, 61, 0, 0.1);
 }
 
+/* Input minimal — direct border-bottom style for inline inputs (guest booking, book flow) */
+.input-minimal {
+  border: none;
+  border-bottom: 1px solid #8c7166;
+  background: transparent;
+  padding: 12px 0;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+.input-minimal:focus {
+  outline: none;
+  box-shadow: none;
+  border-bottom: 2px solid #9e3d00;
+}
+
 /* Input underline — animated copper underline for Contact form fields */
 .input-underline::after {
   content: '';

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { EB_Garamond, Inter } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/layout/Nav";
-import Footer from "@/components/layout/Footer";
 
 const ebGaramond = EB_Garamond({
   variable: "--font-eb-garamond",
@@ -46,11 +44,7 @@ export default function RootLayout({
           className="fixed inset-0 pointer-events-none grain-texture opacity-[0.03] z-[-1]"
           aria-hidden="true"
         />
-        <Nav />
-        <main className="relative pt-24 overflow-x-hidden min-h-svh">
-          {children}
-        </main>
-        <Footer />
+        {children}
       </body>
     </html>
   );

@@ -1,13 +1,37 @@
 "use client";
 
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import type { FormEvent } from "react";
 
 export default function ContactPage() {
   const router = useRouter();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [inquiry, setInquiry] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setLoading(true);
+    setError(null);
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, inquiry, message }),
+    });
+
+    setLoading(false);
+
+    if (!res.ok) {
+      const body = await res.json().catch(() => ({}));
+      setError(body.error ?? "Something went wrong. Please try again.");
+      return;
+    }
+
     router.push("/contact/sent");
   }
 
@@ -151,6 +175,8 @@ export default function ContactPage() {
                     placeholder="Full Name"
                     type="text"
                     required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </div>
                 <div className="relative input-underline">
@@ -159,21 +185,24 @@ export default function ContactPage() {
                     placeholder="Email Address"
                     type="email"
                     required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
               </div>
               <div className="relative input-underline">
                 <select
                   className="w-full bg-transparent border-0 border-b border-secondary/30 py-sm focus:ring-0 text-secondary font-body-md appearance-none outline-none"
-                  defaultValue=""
+                  value={inquiry}
+                  onChange={(e) => setInquiry(e.target.value)}
                 >
                   <option value="" disabled>
                     Nature of Inquiry
                   </option>
-                  <option value="sports">Sports Injury</option>
-                  <option value="rehab">Post-Surgery Rehab</option>
-                  <option value="chronic">Chronic Pain</option>
-                  <option value="other">General Question</option>
+                  <option value="Sports Injury">Sports Injury</option>
+                  <option value="Post-Surgery Rehab">Post-Surgery Rehab</option>
+                  <option value="Chronic Pain">Chronic Pain</option>
+                  <option value="General Question">General Question</option>
                 </select>
               </div>
               <div className="relative input-underline">
@@ -181,13 +210,29 @@ export default function ContactPage() {
                   className="w-full bg-transparent border-0 border-b border-secondary/30 py-sm focus:ring-0 placeholder:text-secondary/50 font-body-md resize-none outline-none"
                   placeholder="Your Message"
                   rows={4}
+                  required
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 />
               </div>
+
+              {error && (
+                <p className="text-error font-body-md text-sm">{error}</p>
+              )}
+
               <button
                 type="submit"
-                className="bg-secondary text-on-secondary px-xl py-md rounded-lg font-label-md text-label-md hover:bg-on-surface transition-all"
+                disabled={loading}
+                className="bg-secondary text-on-secondary px-xl py-md rounded-lg font-label-md text-label-md hover:bg-on-surface transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center gap-sm"
               >
-                Send Message
+                {loading ? (
+                  <>
+                    <span className="material-symbols-outlined animate-spin text-[18px]">progress_activity</span>
+                    Sending…
+                  </>
+                ) : (
+                  "Send Message"
+                )}
               </button>
             </form>
           </div>

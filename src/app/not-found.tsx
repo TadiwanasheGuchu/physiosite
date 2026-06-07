@@ -1,8 +1,12 @@
 import Link from "next/link";
+import Nav from "@/components/layout/Nav";
+import Footer from "@/components/layout/Footer";
 
 export default function NotFound() {
   return (
-    <main className="flex-grow flex flex-col items-center justify-center pt-xl px-gutter relative min-h-[calc(100vh-200px)]">
+    <>
+      <Nav />
+    <main className="relative pt-24 overflow-x-hidden flex-grow flex flex-col items-center justify-center px-gutter min-h-svh">
       {/* Background lighting */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/4 -right-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]" />
@@ -118,5 +122,7 @@ export default function NotFound() {
 
       </div>
     </main>
+      <Footer />
+    </>
   );
 }
