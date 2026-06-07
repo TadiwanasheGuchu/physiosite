@@ -1,7 +1,9 @@
 'use client';
 
-import { useState } from 'react';
-import { useSession, signOut } from 'next-auth/react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import type { User } from '@supabase/supabase-js';
+import { createClient } from '@/lib/supabase/client';
 import Link from 'next/link';
 
 const EXERCISES = [
@@ -25,8 +27,27 @@ const PROGRESS_METRICS = [
 ];
 
 export default function PatientDashboardPage() {
-  const { data: session } = useSession();
-  const firstName = session?.user?.name?.split(' ')[0] ?? 'Patient';
+  const router = useRouter();
+  const [user, setUser] = useState<User | null>(null);
+
+  useEffect(() => {
+    const supabase = createClient();
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      if (!user) router.push('/portal/sign-in');
+      else setUser(user);
+    });
+  }, [router]);
+
+  const firstName =
+    user?.user_metadata?.full_name?.split(' ')[0] ??
+    user?.email?.split('@')[0] ??
+    'Patient';
+
+  const handleSignOut = async () => {
+    const supabase = createClient();
+    await supabase.auth.signOut();
+    router.push('/portal/sign-in');
+  };
 
   const [exerciseDone, setExerciseDone] = useState<Record<number, boolean>>(
     Object.fromEntries(EXERCISES.map((e, i) => [i, e.done]))
@@ -64,7 +85,7 @@ export default function PatientDashboardPage() {
               Book Next Session
             </Link>
             <button
-              onClick={() => signOut({ callbackUrl: "/portal/sign-in" })}
+              onClick={handleSignOut}
               className="border border-outline/40 text-on-surface-variant px-md py-md rounded-full font-label-md text-label-md hover:bg-surface-container transition-all whitespace-nowrap flex items-center gap-xs"
             >
               <span className="material-symbols-outlined text-[16px]">logout</span>

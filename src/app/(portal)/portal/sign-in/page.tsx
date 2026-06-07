@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { signIn } from 'next-auth/react';
+import { createClient } from '@/lib/supabase/client';
 import Link from 'next/link';
 
 type AuthMode = 'signin' | 'signup';
@@ -30,20 +30,32 @@ export default function PortalSignInPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
+    setLoading(true);
+    const supabase = createClient();
 
     if (mode === 'signup') {
-      setError("Account creation is not yet available online. Please contact the clinic to be set up.");
+      const { error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: { data: { full_name: fullName } },
+      });
+      setLoading(false);
+      if (error) {
+        setError(error.message);
+      } else {
+        setError("Check your email to confirm your account before signing in.");
+      }
       return;
     }
 
-    setLoading(true);
-    const result = await signIn("credentials", { email, password, redirect: false });
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
     setLoading(false);
 
-    if (result?.error) {
+    if (error) {
       setError("Invalid email or password.");
     } else {
-      router.push("/portal/dashboard");
+      const params = new URLSearchParams(window.location.search);
+      router.push(params.get('callbackUrl') || '/portal/dashboard');
     }
   };
 
